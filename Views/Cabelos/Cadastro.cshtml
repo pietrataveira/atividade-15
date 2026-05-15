@@ -1,0 +1,29 @@
+<body>
+    <h1>Cadastrar Cabelo</h1>
+
+    <form action="" method="post">
+        <div>
+            <label for="">Cor do Cabelo</label>
+            <input type="text" name="cordecabelo" required>
+        </div>    
+        <div>
+            <label for="">Era</label>
+            <input type="text" name="era">
+        </div>
+        <div>
+            <label for="">Ano</label>
+            <input type="number" name="ano" required>
+        </div>
+        <div>
+            <label for="">Nota</label>
+            <input type="text" name="nota" required>
+        </div>
+        <div>
+            <label for="">Comentario</label>
+            <input type="text" name="sinopse">
+        </div>
+        <button type="submit">Salvar</button>
+    </form>
+    
+    <a asp-controller="Cabelos" asp-action="Index">Voltar</a>
+</body>

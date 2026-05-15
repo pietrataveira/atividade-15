@@ -1,0 +1,47 @@
+@model List<Cabelos_do_Taeyong.Models.Cabelos>
+
+<body>
+    <h1>Cabelos do Taeyong</h1>
+    <p>Total de Cabelos: @ViewBag.TotalCabelos</p>
+
+    <a asp-controller="Cabelos" asp-action="Cadastro">Novo Cabelo</a>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Cor do Cabelo</th>
+                <th>Era</th>
+                <th>Ano</th>
+                <th>Nota</th>
+                <th>Comentario</th>
+                <th>Fotos</th>
+            </tr>
+        </thead>
+        @*<tbody>
+            <tr>
+                <td>Trançinhas</td>
+                <td>Limitless</td>
+                <td>2017</td>
+                <td>3.9</td>
+                <td>A SM odiava ele demais, não sei nem como explicar esse ai kkk</td>
+                <td>
+                    <button>Aqui</button>
+                </td>
+
+            </tr>*@
+
+            @foreach (Cabelos t in Model){
+            <tr>
+                <td>@t.Cor_do_Cabelo</td>
+                <td>@t.Era</td>
+                <td>@t.Ano</td>
+                <td>@t.Nota</td>
+                <td>@t.Comentario</td>
+                <td>
+                    <button>Excluir</button>
+                </td>
+            </tr>
+            }            
+        </tbody>
+    </table>
+</body>
